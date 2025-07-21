@@ -1371,7 +1371,7 @@ System: I notice that the provided code was cut off. Below is the complete, upda
       };
 
       window.addEventListener('wheel', stopAutoScroll, { passive: true });
-      window.addEventListener('touchstart', stopAutoScroll);
+      window.addEventListener('touchstart', stopAutoScroll, { passive: true });
       window.addEventListener('keydown', stopAutoScroll);
     }
 
