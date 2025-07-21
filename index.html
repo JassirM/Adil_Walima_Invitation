@@ -1127,6 +1127,18 @@ System: I notice that the provided code was cut off. Below is the complete, upda
   </style>
 </head>
 <body>
+<audio id="bgMusic" loop>
+  <source src="wedding_nasheed.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.onload = function() {
+    const music = document.getElementById("bgMusic");
+    music.play().catch(error => {
+      console.warn("Autoplay failed due to browser policy:", error);
+    });
+  }
+</script>
   <div class="container">
     <header id="home">
      <!--  <div class="bismillah-image">
