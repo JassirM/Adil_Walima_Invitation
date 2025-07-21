@@ -1170,11 +1170,12 @@ System: I notice that the provided code was cut off. Below is the complete, upda
     }).catch(err => {
       console.warn("Play failed:", err);
     });
-// Auto scroll after music starts
-    window.scrollTo({
-      top: 1000, // change this value to match your content position
-      behavior: "smooth"
-    });
+// // Auto scroll after music starts
+//     window.scrollTo({
+//       top: 1000, // change this value to match your content position
+//       behavior: "smooth"
+//     });
+        stopAutoScroll()
   }, { once: true });
 </script>
 
