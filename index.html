@@ -1127,17 +1127,23 @@ System: I notice that the provided code was cut off. Below is the complete, upda
   </style>
 </head>
 <body>
-<audio id="bgMusic" loop>
+<audio id="bgMusic" autoplay muted loop>
   <source src="wedding_nasheed.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 
 <script>
-  window.onload = function() {
+  window.addEventListener("DOMContentLoaded", () => {
     const music = document.getElementById("bgMusic");
-    music.play().catch(error => {
-      console.warn("Autoplay failed due to browser policy:", error);
+    music.play().then(() => {
+      // Try to unmute after a short delay
+      setTimeout(() => {
+        music.muted = false;
+      }, 1000); // adjust delay if needed
+    }).catch((error) => {
+      console.warn("Autoplay failed:", error);
     });
-  }
+  });
 </script>
   <div class="container">
     <header id="home">
